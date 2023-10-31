@@ -79,4 +79,3 @@ const [joke, err] = wrapIt(getJoke())
 - [mats852/doublet](https://github.com/mats852/doublet)
 - [scopsy/await-to-js](https://github.com/scopsy/await-to-js)
 - [thelinuxlich/go-go-try](https://github.com/thelinuxlich/go-go-try)
-
