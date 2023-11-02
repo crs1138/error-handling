@@ -1,14 +1,12 @@
 import { getJoke } from './getJoke.js';
 
 export async function displayJoke() {
-    // try {
-    const joke = await getJoke();
+    const joke = await getJoke().catch((err) => {
+        console.log('::: displayJoke() :::');
+        console.error(err);
+        throw new Error('displayJoke() failed', { cause: err });
+    });
     console.log('================================================');
     console.log({ joke });
     console.log('================================================');
-    // } catch (err) {
-    //     console.log('::: displayJoke() :::');
-    //     console.error(err);
-    //     throw new Error('displayJoke() failed', { cause: err });
-    // }
 }
